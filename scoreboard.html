@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;Tovar Score Center&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: #111;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-shadow: 0 0 15px #FF4500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.scoreboard {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>justify-content: space-around;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>animation: glow 8s infinite alternate;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes glow {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0% { box-shadow: 0 0 20px #FF0000; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>50% { box-shadow: 0 0 40px #00FFAA; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>100% { box-shadow: 0 0 20px #FFD700; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.column {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(0,0,0,0.85);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 0 15px #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.column h2 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #FFD700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.game {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 15px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: rgba(50,50,50,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.team {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.score {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 3px 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.live { background: red; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.final { background: green; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.upcoming { background: blue; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>color: #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Tovar Score Center&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span id="clock"&gt;&lt;/span&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="scoreboard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="column"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;NFL&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;49ers (10-3)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;28&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Cowboys (9-4)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;21&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status live"&gt;LIVE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Chiefs (8-5)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;14&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Bills (10-2)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;24&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status final"&gt;FINAL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="column"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;MLB&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Yankees (50-30)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Red Sox (45-35)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;5&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status live"&gt;LIVE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Dodgers (60-25)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Giants (40-45)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;6&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status final"&gt;FINAL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="column"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;NCAA Top 25&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Alabama (11-1)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;28&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Georgia (12-0)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;31&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status live"&gt;LIVE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="game"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Ohio State (10-2)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;17&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="team"&gt;Michigan (12-0)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="score"&gt;24&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="status upcoming"&gt;UPCOMING&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Last Updated: &lt;span id="updated"&gt;&lt;/span&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Created by Tovar Score Center</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">function updateClock() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('clock').innerText = now.toLocaleString();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('updated').innerText = now.toLocaleTimeString();</p>
+<p class="p1">}</p>
+<p class="p1">setInterval(updateClock, 1000);</p>
+<p class="p1">updateClock();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
